@@ -18,12 +18,14 @@ public class Help {
                 break;
             case '2':
                 System.out.println("Инструкция switch: \n");
-                System.out.println("switch (выражение)");
+                System.out.println("switch (выражение){");
                 System.out.println("case константа:");
-                System.out.println("последовательность инструкций");
-                System.out.println("break");
-                System.out.println("//...");
+                System.out.println("последовательность инструкций;");
+                System.out.println("break;");
+                System.out.println("default:");
+                System.out.println("последовательность инструкций;");
                 System.out.println("}");
+
                 break;
             default:
                 System.out.println("Запрос не найден");
