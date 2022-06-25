@@ -3,32 +3,64 @@ package Exercise4;
 public class Help {
     public static void main(String[] args)
             throws java.io.IOException {
-        System.out.println("Справка:");
-        System.out.println("1. If");
-        System.out.println("2. Switch");
-        System.out.print("Выберите...");
+        char ignore, choice;
+            do {
+                System.out.println("Справка:");
+                System.out.println("1. If");
+                System.out.println("2. Switch");
+                System.out.println("3. For");
+                System.out.println("4. While");
+                System.out.println("5. Do-while\n");
+                System.out.print("Выберите пункт..");
 
-        char choice = (char) System.in.read();
+                choice = (char) System.in.read();
 
-        switch (choice) {
-            case '1':
-                System.out.println("Инструкция if: \n");
-                System.out.println("if (условие) инструкция");
-                System.out.println("else инструкция");
-                break;
-            case '2':
-                System.out.println("Инструкция switch: \n");
-                System.out.println("switch (выражение){");
-                System.out.println("case константа:");
-                System.out.println("последовательность инструкций;");
-                System.out.println("break;");
-                System.out.println("default:");
-                System.out.println("последовательность инструкций;");
-                System.out.println("}");
+                do {
+                    ignore = (char) System.in.read();
+                } while (ignore != '\n');
+            }
+            while (choice < '1' || choice > '5');
 
-                break;
-            default:
-                System.out.println("Запрос не найден");
-        }
+
+            switch (choice) {
+                case '1':
+                    System.out.println();
+                    System.out.println("Реализация селекта if:");
+                    System.out.println("if (условие) {\n инструкция");
+                    System.out.println("} else { \n инструкция; \n}");
+                    break;
+                case '2':
+                    System.out.println();
+                    System.out.println("Реализация селекта switch:");
+                    System.out.println("switch (константа){");
+                    System.out.println("case константа:");
+                    System.out.println("последовательность инструкций;");
+                    System.out.println("break;");
+                    System.out.println("default:");
+                    System.out.println("последовательность инструкций;");
+                    System.out.println("}");
+                    break;
+                case '3':
+                    System.out.println();
+                    System.out.println("Реализация цикла for:");
+                    System.out.println("for (инициализация; условие; итерация){");
+                    System.out.println("последовательность инструкций;");
+                    System.out.println("}");
+                    break;
+                case '4':
+                    System.out.println();
+                    System.out.println("Реализация цикла while:");
+                    System.out.println("while (условие){");
+                    System.out.println("последовательность инструкций;");
+                    System.out.println("}");
+                    break;
+                case '5':
+                    System.out.println();
+                    System.out.println("Реализация цикла do-while:");
+                    System.out.println("do {");
+                    System.out.println("последовательность инструкций;");
+                    System.out.println("} while (условие);");
+                    break;
+            }
     }
 }
